@@ -234,9 +234,12 @@ class ExportCommand(Command):
 
         group.add_argument('--all', help='specify whether export all itmes.',
                             action='store_true')
-        group.add_argument('--isnone', help='specify whether exort items which is None',
+        group.add_argument('--isnone', help='specify whether export items which is None',
                            action='store_true')
 
     def execute(self):
         with closing(TranslateDict(self.dictionary)) as dic:
-            dic.export_all_items(self.excelfile)
+            if not self.isnone:
+                dic.export_all_items(self.excelfile)
+            else:
+                dic.export_has_not_value(self.excelfile)
