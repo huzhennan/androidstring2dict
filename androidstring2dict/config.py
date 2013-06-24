@@ -1,5 +1,6 @@
 
-
+# Android_Component_SubPath : specify components in android code.
+# We want to import and export.
 Android_Component_SubPath = [
     #'packages/apps/Gallery2',
     #'packages/apps/Camera',
