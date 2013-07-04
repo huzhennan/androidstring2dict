@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-# encoding: utf8
-
+# -*- coding: UTF-8 -*-
 import os
 from contextlib import closing
 from translate_dict import TranslateDict
